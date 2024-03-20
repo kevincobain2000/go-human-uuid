@@ -42,9 +42,10 @@ jobs:
       - name: Test
         uses: kevincobain2000/action-coveritup@v2
         with:
-          type: go-test-run-time
+          type: go-test-runtime
           command: go test -race -v ./... -count=1 -coverprofile=coverage.out
           record: runtime
+          metric: sec
 
       - name: Coverage
         run: gocov convert coverage.out | gocov-xml > coverage.xml
