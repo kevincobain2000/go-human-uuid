@@ -36,7 +36,7 @@ jobs:
         uses: kevincobain2000/action-coveritup@v2
         with:
           type: go-build-time
-          command: go mod tidy;go build main.go
+          command: go mod tidy && go build main.go
           record: runtime
 
       - name: Test
