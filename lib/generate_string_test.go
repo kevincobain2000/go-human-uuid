@@ -7,16 +7,22 @@ import (
 )
 
 func TestGenerateString(t *testing.T) {
-	type TestCase struct {
-		length int
+	for i := 0; i < 5; i++ {
+		r := randomWhole(0, 100)
+		s := GenerateString(r)
+		assert.Equal(t, r, len(s))
 	}
-	testCases := []TestCase{
-		{
-			length: 5,
-		},
-	}
-
-	for _, tc := range testCases {
-		assert.Equal(t, tc.length, len(GenerateString(tc.length)))
+}
+func TestRandomness(t *testing.T) {
+	randoms := []string{}
+	for i := 0; i < 1000; i++ {
+		r := randomWhole(5, 100)
+		s := GenerateString(r)
+		// check if the string is already generated
+		for _, v := range randoms {
+			assert.NotEqual(t, v, s)
+		}
+		randoms = append(randoms, s)
+		assert.Equal(t, r, len(s))
 	}
 }
