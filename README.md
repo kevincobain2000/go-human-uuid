@@ -8,8 +8,6 @@
 
 ---
 
-**Phrases:** Generate Random human readable phrases in GO.
-
 **UUID:** Generate human readable UUID in GO.
 
 
