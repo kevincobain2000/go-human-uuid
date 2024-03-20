@@ -32,11 +32,13 @@ jobs:
           go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
           curl -sLk https://raw.githubusercontent.com/kevincobain2000/cover-totalizer/master/install.sh | sh
 
+      - name: Go Mod Tidy
+        run: go mod tidy
       - name: Go Build
         uses: kevincobain2000/action-coveritup@v2
         with:
           type: go-build-time
-          command: go mod tidy && go build main.go
+          command: go build main.go
           record: runtime
 
       - name: Test
