@@ -21,7 +21,6 @@ linters:
     - goprintffuncname
     - gosec
     - prealloc
-    - predeclared
     - revive
     - predeclared
     - stylecheck

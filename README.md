@@ -45,4 +45,23 @@ LUPUV
 VECIQ
 ```
 
+**Generate with Options**
+
+```go
+import (
+    g github.com/kevincobain2000/go-human-uuid/lib
+)
+
+func main() {
+	options := []g.Option{
+		func(opt *g.Options) error {
+			opt.Length = 10
+			return nil
+		},
+	}
+    gen, err := g.NewGenerator(options...)
+    gen.Generate()
+}
+```
+
 ### Disclaimer
