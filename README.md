@@ -27,16 +27,6 @@
 
 ## Usage
 
-```go
-import (
-    g github.com/kevincobain2000/go-human-uuid
-)
-
-func main() {
-    g.GenerateString(5)
-}
-```
-
 ```
 DARAW
 XAHAJ
