@@ -6,7 +6,7 @@ on:
     branches:
       - '**'
 
-name: "Cover It Up v2"
+name: "Test"
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
@@ -32,7 +32,3 @@ jobs:
       - run: go build main.go
       - run: go test -race -v ./...
       - run: golangci-lint run ./...
-
-      - uses: kevincobain2000/action-coveritup@v2
-        with:
-          pr_comment: true
