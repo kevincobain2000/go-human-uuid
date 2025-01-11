@@ -8,10 +8,10 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func randomWhole(min, max int) int {
+func randomWhole(minimum, maximum int) int {
 	// #nosec G404
 	randGen := rand.New(rand.NewSource(time.Now().UnixNano()))
-	return randGen.Intn(max-min) + min
+	return randGen.Intn(maximum-minimum) + minimum
 }
 
 func TestGenerateString(t *testing.T) {

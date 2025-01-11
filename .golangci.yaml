@@ -14,7 +14,7 @@ linters:
     - bodyclose
     - dupl
     - errorlint
-    - exportloopref
+    - copyloopvar
     - goconst
     - gocritic
     - gocyclo

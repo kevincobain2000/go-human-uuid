@@ -33,10 +33,10 @@ func NewGenerator(opts ...Option) (*Options, error) {
 }
 
 // randomWhole generates a random whole number within the given range
-func (o *Options) randomWhole(min, max int) int {
+func (o *Options) randomWhole(minimum, maximum int) int {
 	// #nosec G404
 	randGen := rand.New(rand.NewSource(time.Now().UnixNano()))
-	return randGen.Intn(max-min) + min
+	return randGen.Intn(maximum-minimum) + minimum
 }
 
 // GenerateString generates a string based on the given length
